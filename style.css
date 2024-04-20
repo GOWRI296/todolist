@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background-color: rgb(18, 12, 18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box {
+    width: calc(100% - 20px);
+    max-width: 540px;
+    background: rgba(157, 133, 97, 0.968);
+    padding: 40px 30px 70px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px rgb(235, 189, 8);
+}
+h3 {
+    font-size: 70px;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    color: orange;
+    text-shadow: 3px 3px 3px rgb(221, 74, 74);
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeInOut 3s ease infinite alternate; /* Apply fadeInOut animation */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    50% {
+        opacity: 1; /* End with opacity 1 */
+    }
+    100% {
+        opacity: 0; /* Back to opacity 0 */
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+
+
+
+
+h2 {
+    color: rgb(255, 172, 5);
+    font-size: 30px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    text-shadow: 6px 6px 8px rgb(20, 24, 1);
+}
+
+.text-box h2 img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    margin-top: -15px;
+    border-radius: 50px;
+    box-shadow: 8px 8px 8px black;
+  
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.row input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.725);
+   
+   
+}
+
+.row button {
+    width: calc(100% - 20px);
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.725);
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 12px 8px;
+    margin-bottom: 10px;
+    background-color: orange;
+    color: whitesmoke;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.725);
+    text-shadow: 4px 4px 4px black;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+  
+}
+
+ul li.checked {
+    background: rgba(172, 255, 47, 0.789);
+    color: #fff;
+}
+
+ul li.checked::before {
+    background: url(images/checked.png);
+    background-size: cover;
+}
+
+ul li span {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.725);
+}
+
+    
+
+
+@media screen and (max-width: 600px) {
+    .text-box {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .row input,
+    .row button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
